@@ -5,16 +5,86 @@
 <!-- 공통 추가 -->
 <jsp:include page="../index.jsp"></jsp:include>
 
-<table>
-	<th>
-		<td>일요일</td>
-		<td>월요일</td>
-		<td>화요일</td>
-		<td>수요일</td>
-		<td>목요일</td>
-		<td>금요일</td>
-		<td>토요일</td>
-	</th>
+
+<style>
+@font-face {
+    font-family: 'Jeonju_gakL';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/Jeonju_gakL.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+  font-family: 'Jeonju_gakL';
+  color: #65479B;
+}
+
+.title {
+	text-align: center;
+}
+
+.control-btn button{
+
+}
+
+.control-btn #input{
+	border: 2px solid #B89AE4;
+	background-color: #B89AE4;
+	border-radius: 3px 5px 0 0;
+	padding: 9px 20px 4px 20px;
+	margin: 0 20px 0 0px;
+}
+
+.control-btn #remove{
+	border: 2px solid #DEDEDE;
+	background-color: #DEDEDE;
+	border-radius: 3px 5px 0 0;
+	padding: 9px 20px 4px 20px;
+}
+
+.month_calendar {
+	width:100%;
+	border: 2px solid #65479B;
+	border-collapse: collapse;
+}
+
+.month_calendar th, td{
+	border: 2px solid #65479B;
+}
+
+.month_calendar th{
+	background-color: #B89AE4;
+	padding: 10px;
+	text-align: center;
+}
+
+.month_calendar td{
+	padding: 0 10px 40px 40px;
+	text-align: end;
+}
+</style>
+
+
+<div class="title">
+	<h1>BOOK CALENDAR</h1>
+</div>
+
+<div class="control-btn">
+	<button id="input">INPUT</button>
+	<button id="remove">REMOVE</button>
+</div>
+
+
+<table class="month_calendar">
+	<tr>
+		<th>S</th>
+		<th>M</th>
+		<th>T</th>
+		<th>W</th>
+		<th>T</th>
+		<th>F</th>
+		<th>S</th>
+	</tr>
 	<tr>
 		<td>29</td>
 		<td>30</td>
